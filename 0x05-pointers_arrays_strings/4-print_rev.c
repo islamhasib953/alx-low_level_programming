@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 
 /**
  * print_rev - prints revarsed string by a newline
@@ -10,16 +10,16 @@ i#include "main.h"
 
 void print_rev(char *s)
 {
-	int i = 0;
+    int i = 0;
 
-	while (s[i])
-	{
-		i++;
+    while (s[i])
+    {
+        i++;
 
-		while (i--)
-		{
-			_putchar(s[i]);
-		}
-		_putchar('\n');
-	}
+        while (i--)
+        {
+            _putchar(s[i]);
+        }
+        _putchar('\n');
+    }
 }
