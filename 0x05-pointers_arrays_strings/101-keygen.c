@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#inlcude <time.h>
 
 /**
  * main - generates random passwords for 101 -crackne
  * Return: 0
-*/
+ */
 
 int main(void)
 {
