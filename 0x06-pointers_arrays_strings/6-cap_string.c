@@ -7,7 +7,7 @@
  * @c: character
  *
  * Return: 1 if true, 0 if false
-*/
+ */
 
 int islower(char c)
 {
@@ -20,7 +20,7 @@ int islower(char c)
  * @c: character
  *
  * Return: 1 if true, 0 if false
-*/
+ */
 
 int isDelimiter(char c)
 {
@@ -28,7 +28,7 @@ int isDelimiter(char c)
 	char delimiter[] = " \t\n,.!?\"(){}";
 
 	for (i = 0; i < 12; i++)
-		if (c ==  delimiter[i])
+		if (c == delimiter[i])
 			return (1);
 	return (0);
 }
@@ -39,24 +39,24 @@ int isDelimiter(char c)
  * @s: input string
  *
  * Return: string with capitalizes words
-*/
+ */
 
 char *cap_string(char *s)
 {
 	char *ptr = s;
-	int x = 1;
+	int foundDelimit = 1;
 
 	while (*s)
 	{
 		if (isDelimiter(*s))
-			x = 1;
-		else if (islower(*s) && x)
+			foundDelimit = 1;
+		else if (islower(*s) && foundDelimit)
 		{
 			*s -= 32;
-			x = 0;
+			foundDelimit = 0;
 		}
 		else
-			x = 0;
+			foundDelimit = 0;
 		s++;
 	}
 	return (ptr);
