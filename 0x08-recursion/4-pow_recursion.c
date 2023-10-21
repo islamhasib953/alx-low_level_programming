@@ -1,4 +1,4 @@
-#inclide "main.h"
+#include "main.h"
 
 /**
  * _pow_recursion - search a string for any of a set of bytes
