@@ -1,24 +1,20 @@
 #include "lists.h"
 
 /**
- * add_nodeint - adds a node to the top
- * @head: pointer to first node
- * @n: value for new node
+ * listint_len - prints a liked lists
+ * @h: pointer to first node
  *
- * Return: pointer to new node
+ * Return: listint_len of list
 */
 
-listint_t *add_nodeint(listint_t **head, const int n)
+size_t listint_len(const listint_t *h)
 {
-	listint_t *new_node = malloc(sizeof(listint_t));
+	size_t i = 0;
 
-	if (!head || !new_node)
-		return (NULL);
-
-	new_node->next = NULL;
-	new_node->n = n;
-	if (*head)
-		new_node->next = *head;
-	*head = new_node;
-	return (new_node);
+	while (h)
+	{
+		h = h->next;
+		i++;
+	}
+	return (i);
 }
