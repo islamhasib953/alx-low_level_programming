@@ -1,4 +1,4 @@
-#inclue "main.h"
+#include "main.h"
 
 /**
  * flip_bits - return number of bits that would need to be flipped to
