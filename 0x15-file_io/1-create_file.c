@@ -15,7 +15,6 @@ int _strlen(char *s)
 		i++;
 	return (i);
 }
-
 /**
  * create_file - creates a file
  * @filename: name of file to create
