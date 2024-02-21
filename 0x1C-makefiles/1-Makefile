@@ -2,4 +2,4 @@ SRC := .c
 CC := gcc
 
 all : main$(SRC) school$(SRC)
-	CC main$(SRC) school$(SRC) -o school
+	$(CC) main$(SRC) school$(SRC) -o school
