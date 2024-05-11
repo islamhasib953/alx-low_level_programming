@@ -1,14 +1,17 @@
 #include "search_algos.h"
 #include <math.h>
 /**
- * binary_search -  searches a value in an array
+ * jump_search - Searches for a value in a sorted array
+ *               of integers using jump search.
  *
  * @array: input array
  * @size: size of array
  * @value: value to find it in array
  * Return: Always EXIT_SUCCESS
+ *
+ * Description: print value every compare with target in array
+ *				and use step to jump in array using root of size
  */
-
 
 int jump_search(int *array, size_t size, int value)
 {
@@ -16,7 +19,7 @@ int jump_search(int *array, size_t size, int value)
 
 	if (size == 0 || array == NULL)
 		return (-1);
-	
+
 	stp = sqrt(size);
 	for (last = jump = 0; array[jump] < value && jump < size;)
 	{
