@@ -2,13 +2,14 @@
 #include <math.h>
 
 /**
- * binary_search -  searches a value in an array
+ * _binary_search -  searches a value in an array
  *
  * @array: input array
  * @left: first value in array to search between
  * @right: second value in array to search between
  * @value: value to find it in array
  * Return: Always EXIT_SUCCESS
+ * Description: Prints the [sub]array being searched after each change.
  */
 
 int _binary_search(int *array, size_t left, size_t right, int value)
@@ -46,8 +47,8 @@ int _binary_search(int *array, size_t left, size_t right, int value)
  * @value: value to find it in array
  * Return: Always EXIT_SUCCESS
  *
- * Description: Every time you compare a value in the array to the value you are searching for,
- *              you have to print this value
+ * Description: Every time you compare a value in the array to the value
+ *				you are searching for, you have to print this value
  */
 
 int exponential_search(int *array, size_t size, int value)
@@ -67,4 +68,3 @@ int exponential_search(int *array, size_t size, int value)
 	printf("Value found between indexes [%ld] and [%ld]\n", i / 2, right);
 	return (_binary_search(array, i / 2, right, value));
 }
-
